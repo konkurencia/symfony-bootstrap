@@ -2,6 +2,8 @@ symfony-bootstrap
 =================
 
 Symfony2 Bootstrap project with added goodies we use daily
+**Last updated Dec 10, 2013**
+*We use this bootstrap for new projects, and it is built on latest branches of it's bundles, so there may be some point between our update (when we find out it's broken) and uncompatible bundle (master branch) updates. If you encounter this situation, please open an issue in this repo, or create a pull request.*
 
 Dem goodies:
 -----------
@@ -18,5 +20,6 @@ Moar goodies soon (lol):
 -----------------
 
 * documentation for API helper
+* update API helper for writing (currently for readonly APIs only)
 * FOSUser / SonataUser bundle for better user management
 
