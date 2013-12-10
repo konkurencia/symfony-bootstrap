@@ -2,7 +2,9 @@ parameters:
 #    konkurencia_common.example.class: Konkurencia\CommonBundle\Example
 
 services:
-
+    krc_api:
+        class: %krc_api.builder_class%
+        arguments: [%krc_api.resources%, %krc_api.api_base_url%, @vich_uploader.templating.helper.uploader_helper, @liip_imagine.templating.helper]
 
 #form services
     krc.type.admin_image:

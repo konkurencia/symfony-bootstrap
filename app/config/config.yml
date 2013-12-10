@@ -116,3 +116,8 @@ sonata_admin:
 fos_rest:
     routing_loader:
         default_format: json
+
+konkurencia_common:
+    builder_class: "Konkurencia\CommonBundle\Api\ApiBuilder"
+    api_base_url: %kernel.root_dir%/api/v1/
+    resources: ~

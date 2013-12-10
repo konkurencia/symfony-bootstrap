@@ -22,6 +22,10 @@ class KonkurenciaCommonExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $container->setParameter('krc_api.builder_class', $config['builder_class']);
+        $container->setParameter('krc_api.resources', $config['resources']);
+        $container->setParameter('krc_api.api_base_url', $config['api_base_url']);
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }

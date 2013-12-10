@@ -20,9 +20,60 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('konkurencia_common');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('builder_class')->cannotBeEmpty()->end()
+                ->scalarNode('api_base_url')->cannotBeEmpty()->end()
+
+                ->arrayNode('resources')
+                    ->prototype('array')
+                    ->children()
+                        ->arrayNode('list_field_mapping')
+                            ->children()
+                                ->arrayNode('keys')->prototype('scalar')->end()->end()
+                                ->arrayNode('values')->prototype('scalar')->end()->end()
+                                ->arrayNode('foreigns')
+                                    ->prototype('array')
+                                    ->children()
+                                        ->scalarNode('resource')->end()
+                                        ->scalarNode('resourceUrl')->defaultNull()->end()
+                                        ->booleanNode('isList')->defaulttrue()->end()
+                                        ->arrayNode('field_mapping')
+                                            ->children()
+                                                ->arrayNode('keys')->prototype('scalar')->end()->end()
+                                                ->arrayNode('values')->prototype('scalar')->end()->end()
+                                            ->end()
+                                        ->end()
+                                    ->end()
+                                ->end()
+                            ->end()
+                            ->end()
+                        ->end()
+                        ->arrayNode('detail_field_mapping')
+                            ->children()
+                                ->arrayNode('keys')->prototype('scalar')->end()->end()
+                                ->arrayNode('values')->prototype('scalar')->end()->end()
+                                ->arrayNode('foreigns')
+                                    ->prototype('array')
+                                    ->children()
+                                        ->scalarNode('resource')->end()
+                                        ->scalarNode('resourceUrl')->defaultNull()->end()
+                                        ->booleanNode('isList')->defaulttrue()->end()
+                                        ->arrayNode('field_mapping')
+                                            ->children()
+                                                ->arrayNode('keys')->prototype('scalar')->end()->end()
+                                                ->arrayNode('values')->prototype('scalar')->end()->end()
+                                            ->end()
+                                        ->end()
+                                    ->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+
+            ->end()
+            ;
 
         return $treeBuilder;
     }
