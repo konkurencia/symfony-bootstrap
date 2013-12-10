@@ -67,3 +67,52 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+liip_imagine:
+    driver: imagick
+    cache_prefix: /files/cache
+    filter_sets:
+        thumb_100:
+            quality: 100
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound, allow_upscale: true }
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        pics:
+            uri_prefix: files/pics
+            upload_destination: %kernel.root_dir%/../web/files/pics
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        sonata.block.service.text:
+        sonata.block.service.action:
+        sonata.block.service.rss:
+
+sonata_admin:
+    title:      Konkurencia Admin
+    title_logo: bundles/sonataadmin/logo_title.png
+    templates:
+        # default global templates
+        layout:  SonataAdminBundle::standard_layout.html.twig
+        ajax:    SonataAdminBundle::ajax_layout.html.twig
+
+        # default actions templates, should extend a global templates
+        list:    SonataAdminBundle:CRUD:list.html.twig
+        show:    SonataAdminBundle:CRUD:show.html.twig
+        edit:    KonkurenciaCommonBundle:Admin:edit.html.twig
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: left, type: sonata.admin.block.admin_list }
+
+        groups: ~
+
+fos_rest:
+    routing_loader:
+        default_format: json

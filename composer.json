@@ -18,7 +18,23 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+
+        "gedmo/doctrine-extensions": "*",
+        "knplabs/knp-gaufrette-bundle": "*",
+        "vich/uploader-bundle": "*",
+        "liip/imagine-bundle": "*",
+
+        "friendsofsymfony/rest-bundle": "1.0.*",
+        "jms/serializer-bundle": "*",
+        "jms/security-extra-bundle": "*",
+        "jms/di-extra-bundle": "*",
+
+        "sonata-project/cache-bundle": "dev-master",
+        "sonata-project/admin-bundle": "*",
+        "sonata-project/doctrine-orm-admin-bundle": "*"
+
+
     },
     "scripts": {
         "post-install-cmd": [
