@@ -105,7 +105,7 @@ sonata_admin:
         # default actions templates, should extend a global templates
         list:    SonataAdminBundle:CRUD:list.html.twig
         show:    SonataAdminBundle:CRUD:show.html.twig
-        edit:    KonkurenciaCommonBundle:Admin:edit.html.twig
+        edit:    SonataAdminBundle:CRUD:edit.html.twig
     dashboard:
         blocks:
             # display a dashboard block
