@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /private/montessori
+    # rewrite to your base
+    RewriteBase /private/symfony-bootstrap
 
     # temporary fix for assetic/lessphp incorrect path detection (image links from .less files have incorrect paths)
     # important: do not enable this outside /img (some JS files are generated dynamically)
