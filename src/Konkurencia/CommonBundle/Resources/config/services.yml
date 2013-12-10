@@ -1,0 +1,7 @@
+parameters:
+#    konkurencia_common.example.class: Konkurencia\CommonBundle\Example
+
+services:
+#    konkurencia_common.example:
+#        class: %konkurencia_common.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

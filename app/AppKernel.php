@@ -28,6 +28,8 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            
+            new Konkurencia\CommonBundle\KonkurenciaCommonBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
