@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /private/montessori
+
+    # temporary fix for assetic/lessphp incorrect path detection (image links from .less files have incorrect paths)
+    # important: do not enable this outside /img (some JS files are generated dynamically)
+    RewriteRule app_dev.php/(img|uploads)/(.*) web/$1/$2 [QSA,NC,L]
+
+    # front-end: do not prevent access to anything directly routed through front controller
+    # (e.g. dynamically created JS or CSS files)
+    RewriteRule app_dev.php - [QSA,L]
+
+    # front-end: access to static files
+    RewriteRule (bundles|css|js|libs|img|images|uploads|files|templates|fonts|assets)(/.*) web/$1$2 [QSA,NC]
+    RewriteRule apple-touch-icon.png web/apple-touch-icon.png [QSA,NC,L]
+    RewriteRule crossdomain.xml web/crossdomain.xml [QSA,NC,L]
+    RewriteRule favicon.ico web/favicon.ico [QSA,NC,L]
+    RewriteRule humans.txt web/humans.txt [QSA,NC,L]
+    RewriteRule robots.txt web/robots.txt [QSA,NC,L]
+
+    # front-end: rewrite everything else to front controller (unless file exists)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app.php [QSA,L]
+
+</IfModule>
+
+
