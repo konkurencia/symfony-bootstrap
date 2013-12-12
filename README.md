@@ -15,7 +15,7 @@ Dem goodies:
 * added and configured VichUploader and LiipImagine bundles for painless image manipulation (blood has been cried)
 * incorporated this nicely into SonataAdmin (http://stackoverflow.com/questions/11366278/how-to-display-the-current-picture-above-the-upload-field-in-sonataadminbundle/12696046#12696046 <--- this is me!)
 * added our API helper - currently being used in private projects, but we promise it will be documented soon (lol), meanwhile just read the code, it's built as a layer above FOSRest bundle, it's simple :)
-* basic security to protect admin (prompt login)
+* SonataUser bundle, intergrated into admin and related security data
 
 
 Moar goodies soon (lol):
@@ -23,5 +23,3 @@ Moar goodies soon (lol):
 
 * documentation for API helper
 * update API helper for writing (currently for readonly APIs only)
-* FOSUser / SonataUser bundle for better user management
-
