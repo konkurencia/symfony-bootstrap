@@ -8,6 +8,6 @@ services:
 
 #form services
     krc.type.admin_image:
-        class: Teo\MontessoriBundle\Form\Type\KrcAdminImageType
+        class: Konkurencia\CommonBundle\Form\Type\KrcAdminImageType
         tags:
             - { name: form.type, alias: krc_admin_image }
