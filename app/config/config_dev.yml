@@ -34,3 +34,6 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+konkurencia_common:
+    api_base_url: %base_url%/app_dev.php/api/v1/

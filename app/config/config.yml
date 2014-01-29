@@ -142,5 +142,5 @@ fos_user:
 
 konkurencia_common:
     builder_class: "Konkurencia\CommonBundle\Api\ApiBuilder"
-    api_base_url: %kernel.root_dir%/api/v1/
+    api_base_url: %base_url%/api/v1/
     resources: ~
