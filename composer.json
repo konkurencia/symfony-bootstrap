@@ -31,6 +31,7 @@
         "jms/di-extra-bundle": "*",
 
         "sonata-project/cache-bundle": "dev-master",
+        "sonata-project/cache": "dev-master",
         "sonata-project/admin-bundle": "*",
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
 
