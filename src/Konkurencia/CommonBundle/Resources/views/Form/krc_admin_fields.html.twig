@@ -2,7 +2,7 @@
 
 {% block krc_admin_image_widget %}
     {% spaceless %}
-        {% set subject =  form.vars.sonata_admin.admin.getSubject%}
+        {% set subject =  form.parent.vars.value %}
         {% if subject.id and attribute(subject, name) %}
             <a href="{{ asset(vich_uploader_asset(subject, name)) }}" target="_blank">
                 <img src="{{ asset(vich_uploader_asset(subject, name)) }}" width="200" />
@@ -15,7 +15,7 @@
 
 {% block krc_admin_file_widget %}
     {% spaceless %}
-        {% set subject =  form.vars.sonata_admin.admin.getSubject%}
+        {% set subject =  form.parent.vars.value %}
         {% if subject.id and attribute(subject, name) %}
             <a href="{{ asset(vich_uploader_asset(subject, name)) }}" target="_blank">
                 Download the {{ name }}
