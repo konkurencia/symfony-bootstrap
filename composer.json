@@ -25,7 +25,7 @@
         "vich/uploader-bundle": "*",
         "liip/imagine-bundle": "*",
 
-        "friendsofsymfony/rest-bundle": "1.0.*",
+        "friendsofsymfony/rest-bundle": "*",
         "jms/serializer-bundle": "*",
         "jms/security-extra-bundle": "*",
         "jms/di-extra-bundle": "*",
